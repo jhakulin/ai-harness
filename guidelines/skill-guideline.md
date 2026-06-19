@@ -1,6 +1,6 @@
-# Great Skills Guideline
+# Skill Guideline
 
-A great skill makes the agent more reliable by turning repeated work into a small, explicit, verifiable process. It should help the agent reliably perform one repeatable task with the right trigger, workflow, guardrails, and output format.
+A skill makes the agent more reliable by turning repeated work into a small, explicit, verifiable process. It should help the agent reliably perform one repeatable task with the right trigger, workflow, guardrails, and output format.
 
 This guideline is generic and reusable for company skill registries that use `SKILL.md`-style agent skills.
 
