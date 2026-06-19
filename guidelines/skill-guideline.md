@@ -1,8 +1,6 @@
 # Skill Guideline
 
-A skill makes the agent more reliable by turning repeated work into a small, explicit, verifiable process. It should help the agent reliably perform one repeatable task with the right trigger, workflow, guardrails, and output format.
-
-This guideline is generic and reusable for company skill registries that use `SKILL.md`-style agent skills.
+A skill is a focused operational instruction set that helps an agent perform a repeatable task consistently. It should define when it applies, what workflow to follow, what boundaries to respect, and what output to produce.
 
 ## Core Principles
 
@@ -50,29 +48,13 @@ For steps that are easy to skip, underdo, or interpret loosely, add a clear comp
 
 Define the expected output for this skill.
 
-Use a fixed format when consistency matters. Adapt the format when the task, user request, or target system requires something else.
-
-Generic example:
-
-# [Result Title]
-
-## Summary
-[Short summary of the result]
-
-## Main Output
-[The actual answer, plan, review, draft, code change, or artifact]
-
-## Risks or Open Questions
-- [Risk, blocker, assumption, or unknown]
-
-## Verification
-- [Check completed]
-- [Check completed]
+Use a fixed format when consistency matters. Otherwise, match the user request or target system.
 
 ## Guardrails
 
+Define important boundaries, safety rules, approval requirements, and common mistakes to avoid.
+
 - Do not [common mistake].
-- Do not [unsafe or low-quality behavior].
 - Ask for approval before [risky action].
 - Prefer [company standard] over [discouraged pattern].
 
@@ -82,29 +64,17 @@ Before finishing, confirm:
 
 - [ ] The output directly satisfies the request.
 - [ ] Relevant context was checked.
-- [ ] Assumptions, risks, and blockers are visible.
 - [ ] The output follows the required format.
+- [ ] Any assumptions, risks, or blockers are visible.
 ```
 
-## Sizing Guidelines
+## Skill Scope
 
-Use skill size to keep workflows reliable.
+Prefer small, focused skills.
 
-| Size | Scope | Guidance |
-|------|-------|----------|
-| XS | One small transformation or check | Usually does not need a skill unless repeated often |
-| S | One focused workflow | Ideal skill size |
-| M | One task family with clear branches | Acceptable if the process is still easy to follow |
-| L | Multiple workflows or many branches | Split into smaller skills |
-| XL | Broad assistant behavior | Do not create as a single skill |
+A skill should cover one repeatable workflow or one closely related task family. Split a skill when it contains multiple unrelated outcomes, multiple owners, many branches, or a name that needs `and`.
 
-Break a skill down further when:
-
-- The name contains `and`.
-- The workflow has multiple unrelated outcomes.
-- The skill needs more than one page of core instructions.
-- Different teams would own different parts.
-- Another skill would need to override large parts of it.
+Avoid broad skills that define general assistant behavior. Put that guidance in system instructions, repository guidance, policy documents, or multiple smaller skills instead.
 
 ## Supporting Files
 
@@ -129,19 +99,9 @@ Rules:
 
 - Keep the core workflow in `SKILL.md`.
 - Put long examples in `examples/`.
-- Put policies, schemas, and deep references in `references/`.
+- Put policies, schemas, and detailed references in `references/`.
 - Put executable helpers in `scripts/`.
-- Reference supporting files only when they are needed.
-
-## Common Rationalizations
-
-| Rationalization | Reality |
-|-----------------|---------|
-| "The model already knows this." | Skills are for consistency, not just knowledge. |
-| "The skill should cover everything." | Broad skills create invocation conflicts and context bloat. |
-| "Examples are enough." | Examples help, but the workflow must still be explicit. |
-| "Quality is obvious." | Agents need concrete verification checks. |
-| "We can fix it later." | Stale skills silently degrade agent behavior. |
+- Reference supporting files directly from `SKILL.md`; avoid nested reference chains.
 
 ## Red Flags
 
@@ -163,16 +123,16 @@ Use these as review signals. Not every skill needs a dedicated `Red Flags` secti
 Before accepting a new or changed skill, confirm:
 
 - [ ] Name is specific, lowercase, and hyphenated.
-- [ ] Description says when to use the skill and when not to use it.
-- [ ] Frontmatter description includes clear triggers and boundaries.
+- [ ] Frontmatter description includes clear triggers, boundaries, false positives, and task-specific keywords.
 - [ ] The workflow is ordered and actionable.
 - [ ] The output format is defined or explicitly delegated to the user/requested target format.
 - [ ] The skill has quality checks or completion criteria.
-- [ ] Risky actions require explicit approval.
-- [ ] Supporting files are referenced only when needed.
+- [ ] Required tools, scripts, and dependencies are explicit.
+- [ ] Required permissions are explicit.
+- [ ] Risky or irreversible actions require explicit approval.
+- [ ] Supporting files are referenced only when needed and directly from `SKILL.md`.
 - [ ] The skill does not overlap unnecessarily with another skill.
 - [ ] The skill can be tested with representative examples.
-
 
 ## Sources
 
