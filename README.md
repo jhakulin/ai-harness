@@ -14,7 +14,7 @@ skills/<skill>/SKILL.md    Reusable skill definitions
 scripts/validate-repo.js   Lightweight repository validator
 ```
 
-## Starting Point
+## Skills
 
 - `skills/skill-authoring`: Use this when creating or improving skills in this repository.
 
