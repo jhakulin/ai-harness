@@ -4,8 +4,6 @@
 
 This repository defines reusable AI agent skills and, later, agent descriptions for software development.
 
-It is not a dump of third-party agent repositories. External material may be used as inspiration, but copied structure or content must be explicitly requested and reviewed.
-
 ## Skill Rules
 
 - Put each skill in `skills/<skill-name>/SKILL.md`.
