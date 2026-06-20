@@ -4,9 +4,9 @@ A skill is a focused operational instruction set that helps an agent perform a r
 
 ## Core Principles
 
-1. **Write workflows, not essays.** A skill should tell the agent what to do, in what order, and how to know when it is done.
+1. **Define executable workflows.** A skill should tell the agent what to do, in what order, and how to know when each procedural step is done.
 2. **Keep each skill narrow.** One skill should cover one repeatable task family.
-3. **Make invocation predictable.** The frontmatter description should clearly say when the skill applies and when it does not.
+3. **Make invocation predictable.** For model-invoked skills, the frontmatter description is the invocation trigger surface, not a summary of the skill body. It should clearly say when the skill applies, when it does not, and which distinct task branches should trigger it.
 4. **Use progressive disclosure.** Keep the main `SKILL.md` focused; move long examples, policies, schemas, and scripts to referenced files.
 5. **Define verification.** Every skill should include quality checks before the agent finishes.
 6. **Treat skills like code.** Review, test, version, and prune them.
@@ -33,7 +33,7 @@ The overview should be short. It should help the agent understand the purpose of
 
 ## Workflow
 
-For steps that are easy to skip, underdo, or interpret loosely, add a clear completion criterion such as `Done when...`.
+For procedural steps that require judgment, external context, tool use, verification, or multi-step work, add a clear completion criterion.
 
 1. Understand the request, goal, inputs, constraints, and expected output.
 2. Inspect relevant context before inventing details.
@@ -108,6 +108,7 @@ Rules:
 Use these as review signals. Not every skill needs a dedicated `Red Flags` section, but every skill should avoid these problems.
 
 - The description says only "helps with".
+- A procedural step does not say how the agent knows it is complete.
 - The skill covers multiple unrelated tasks.
 - The workflow is advice instead of ordered steps.
 - The frontmatter description does not include clear triggers, boundaries, or false positives.
@@ -125,20 +126,13 @@ Before accepting a new or changed skill, confirm:
 - [ ] Name is specific, lowercase, and hyphenated.
 - [ ] Frontmatter description includes clear triggers, boundaries, false positives, and task-specific keywords.
 - [ ] The workflow is ordered and actionable.
+- [ ] Procedural steps that require judgment, external context, tool use, verification, or multi-step work explain how the agent knows the step is complete.
 - [ ] The output format is defined or explicitly delegated to the user/requested target format.
-- [ ] The skill has quality checks or completion criteria.
+- [ ] The skill includes final verification checks before the agent finishes.
+- [ ] Each section changes agent behavior; remove background text, duplicated rules, and stale guidance.
 - [ ] Required tools, scripts, and dependencies are explicit.
 - [ ] Required permissions are explicit.
 - [ ] Risky or irreversible actions require explicit approval.
 - [ ] Supporting files are referenced only when needed and directly from `SKILL.md`.
 - [ ] The skill does not overlap unnecessarily with another skill.
 - [ ] The skill can be tested with representative examples.
-
-## Sources
-
-- Agent Skills specification: https://agentskills.io/specification
-- Claude skill authoring best practices: https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices
-- Addy Osmani, Agent Skills: https://addyosmani.com/blog/agent-skills/
-- Addy Osmani, planning-and-task-breakdown skill: https://github.com/addyosmani/agent-skills/blob/main/skills/planning-and-task-breakdown/SKILL.md
-- Reddit discussion on practical skill use: https://www.reddit.com/r/GithubCopilot/comments/1qthc9m/what_are_the_best_agent_skills_to_use_right_now/
-- Bibek Poudel, The SKILL.md Pattern: https://bibek-poudel.medium.com/the-skill-md-pattern-how-to-write-ai-agent-skills-that-actually-work-72a3169dd7ee
