@@ -5,10 +5,13 @@ Use this repository as the canonical source for reusable software-development ag
 ## Operating Rules
 
 - Read `docs/conventions.md` before adding or changing skills or agents.
+- Read `guidelines/skill-guideline.md` before creating or reviewing skills.
 - Keep changes minimal and grounded in an explicit user need.
-- Do not copy large external repositories or frameworks into this repository.
+- Before adding new folders, integrations, adapters, commands, hooks, or generated metadata, propose the exact structure and wait for approval.
+- Do not copy, mirror, or bulk-import external repositories unless explicitly requested.
 - Do not add tool-specific integration folders unless explicitly requested.
 - Prefer improving one existing skill over adding overlapping skills.
+- Keep each source of truth in one place; reference guidelines instead of duplicating their criteria in skills or docs.
 
 ## Skill Format
 
@@ -21,4 +24,12 @@ description: What the skill does. Use when...
 ---
 ```
 
-Skill names use lowercase letters, digits, and hyphens.
+For skill quality, structure, scope, supporting files, and review criteria, use `guidelines/skill-guideline.md` as the source of truth.
+
+## Collaboration Rules
+
+- If the user asks for a proposal, do not create or edit files until they approve it.
+- If the user asks to implement an approved proposal, make only the approved change.
+- When renaming or adding repository concepts, keep names plain and neutral.
+- Validate changes with `node scripts/validate-repo.js` before committing.
+- Commit and push only after the change is validated and scoped to the user request.
