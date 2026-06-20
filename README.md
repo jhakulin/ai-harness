@@ -17,6 +17,7 @@ scripts/validate-repo.js   Lightweight repository validator
 ## Skills
 
 - `skills/author-agent-skill`: Use this when creating or improving agent skills in this repository.
+- `skills/get-youtube-transcription`: Use this when fetching a transcript for one YouTube video ID or URL.
 
 ## Principles
 
