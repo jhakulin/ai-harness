@@ -18,6 +18,7 @@ from __future__ import annotations
 import os
 import re
 import sys
+from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 try:
@@ -73,8 +74,38 @@ def extract_video_id(value: str) -> str:
     raise ValueError(f"could not extract a YouTube video ID from: {value}")
 
 
+def load_env_file(path: Path) -> None:
+    """Load simple KEY=VALUE pairs without overriding existing environment."""
+    if not path.is_file():
+        return
+
+    for line in path.read_text(encoding="utf-8").splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#") or "=" not in stripped:
+            continue
+        key, value = stripped.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip("'\"")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
+def load_local_env() -> None:
+    """Load local skill credentials if they were not exported by the shell."""
+    script_path = Path(__file__).resolve()
+    skill_dir = script_path.parents[1]
+
+    configured_path = os.environ.get("YOUTUBE_TRANSCRIPTION_ENV_FILE")
+    if configured_path:
+        load_env_file(Path(configured_path).expanduser())
+
+    load_env_file(skill_dir / ".env")
+
+
 def get_proxy_config() -> WebshareProxyConfig:
     """Build Webshare proxy configuration from environment variables."""
+    load_local_env()
+
     username = os.environ.get("WEBSHARE_PROXY_USERNAME")
     password = os.environ.get("WEBSHARE_PROXY_PASSWORD")
 
