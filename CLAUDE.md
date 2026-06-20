@@ -4,7 +4,8 @@ This repository stores reusable software-development agent skills and future age
 
 Follow the same source files used by Codex:
 
-- Repository conventions: `docs/conventions.md`
+- Skill guideline: `guidelines/skill-guideline.md`
+- Agent guideline: `guidelines/agent-guideline.md`
 - Skills: `skills/<name>/SKILL.md`
 - Shared agent instructions: `AGENTS.md`
 

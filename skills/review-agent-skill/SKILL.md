@@ -20,7 +20,7 @@ Review an agent skill against the current repository skill guideline and report 
    - Do not rely on memory of earlier guideline versions.
 
 3. Inspect the skill in context.
-   - If reviewing an existing repository skill, check nearby skill names and repository conventions for overlap or naming conflicts.
+   - If reviewing an existing repository skill, check nearby skill names and repository guidelines for overlap or naming conflicts.
    - If reviewing a proposal, evaluate only what is present and call out missing information as an assumption.
 
 4. Produce findings.
@@ -57,7 +57,7 @@ Review an agent skill against the current repository skill guideline and report 
 
 - Do not rewrite the skill unless asked.
 - Do not duplicate the guideline in the review.
-- Do not invent review criteria outside the current guideline and repository conventions.
+- Do not invent review criteria outside the current guideline and repository guidelines.
 - Do not approve a vague workflow just because the writing is polished.
 - Prefer a short review with strong findings over an exhaustive line edit.
 
@@ -67,5 +67,5 @@ Before finishing:
 
 - Use the current `guidelines/skill-guideline.md` as the review criteria.
 - Check the artifact against the guideline's expectations for scope, trigger, workflow, output, guardrails, and verification.
-- Ensure each finding is tied to the guideline or repository conventions.
+- Ensure each finding is tied to the guideline or repository guidelines.
 - Ensure cosmetic preferences are excluded unless they affect skill behavior or maintainability.

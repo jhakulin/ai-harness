@@ -9,8 +9,7 @@ The repository is intentionally small at first. Add new skills and agents only w
 ```text
 AGENTS.md                  Shared instructions for Codex-style agents
 CLAUDE.md                  Shared instructions for Claude
-docs/conventions.md        Repository authoring rules
-guidelines/                Skill authoring guidelines and templates
+guidelines/                Skill and agent authoring guidelines
 skills/<skill>/SKILL.md    Reusable skill definitions
 scripts/validate-repo.js   Lightweight repository validator
 ```

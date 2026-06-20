@@ -4,8 +4,8 @@ Use this repository as the canonical source for reusable software-development ag
 
 ## Operating Rules
 
-- Read `docs/conventions.md` before adding or changing skills or agents.
 - Read `guidelines/skill-guideline.md` before creating or reviewing skills.
+- Read `guidelines/agent-guideline.md` before creating or reviewing agents.
 - Keep changes minimal and grounded in an explicit user need.
 - Before adding new folders, integrations, adapters, commands, hooks, or generated metadata, propose the exact structure and wait for approval.
 - Do not copy, mirror, or bulk-import external repositories unless explicitly requested.
@@ -25,6 +25,8 @@ description: What the skill does. Use when...
 ```
 
 For skill quality, structure, scope, supporting files, and review criteria, use `guidelines/skill-guideline.md` as the source of truth.
+
+For agent role, delegation, responsibility, boundary, and output criteria, use `guidelines/agent-guideline.md` as the source of truth.
 
 ## Collaboration Rules
 
