@@ -16,7 +16,7 @@ scripts/validate-repo.js   Lightweight repository validator
 
 ## Skills
 
-- `skills/skill-authoring`: Use this when creating or improving skills in this repository.
+- `skills/author-agent-skill`: Use this when creating or improving agent skills in this repository.
 
 ## Principles
 

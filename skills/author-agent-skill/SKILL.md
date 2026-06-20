@@ -1,9 +1,9 @@
 ---
-name: skill-authoring
+name: author-agent-skill
 description: Create or improve reusable agent skills in this repository. Use when a developer wants to turn a repeatable software-development workflow into a skill, revise an existing SKILL.md, define skill triggers, or decide whether a workflow deserves a reusable skill. Do not use for agent persona or role definitions unless the artifact is specifically a skill.
 ---
 
-# Skill Authoring
+# Author Agent Skill
 
 ## Overview
 
