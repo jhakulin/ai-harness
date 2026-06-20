@@ -6,12 +6,9 @@ This repository defines reusable AI agent skills and, later, agent descriptions 
 
 ## Skill Rules
 
-- Put each skill in `skills/<skill-name>/SKILL.md`.
-- Use lowercase hyphenated names.
-- Keep `SKILL.md` short enough to be read in one pass.
-- Include only procedural knowledge that improves repeated execution.
-- Avoid generic advice that a capable coding agent already knows.
-- Add references, scripts, or assets only when they are directly needed.
+Use `guidelines/skill-guideline.md` as the source of truth for creating, reviewing, and changing skills.
+
+Each skill lives in `skills/<skill-name>/SKILL.md`.
 
 ## Agent Rules
 
