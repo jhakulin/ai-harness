@@ -1,18 +1,20 @@
 # Agent Guideline
 
-An agent is a reusable specialist role for software-development work. It defines what responsibility the role owns, when to delegate work to it, what inputs it needs, what outputs it should return, and what boundaries it must respect.
+An agent is a reusable specialist role for software-development work, not a generic persona. It defines what responsibility the role owns, when to delegate work to it, what inputs it needs, what outputs it should return, and what boundaries it must respect.
 
 A skill is a reusable playbook. An agent is an accountable worker that may use one or more skills.
 
 ## Core Principles
 
-1. **Define a role, not a procedure.** An agent should describe responsibility, perspective, authority, and boundaries.
+1. **Define a role, not a procedure.** An agent should describe responsibility, perspective, authority, required inputs, expected outputs, and boundaries.
 2. **Keep the role bounded.** One agent should cover one specialist responsibility area.
 3. **Make delegation clear.** State when work should be handed to this agent and when it should not.
 4. **Require useful inputs.** Define what context the agent needs to produce reliable work.
 5. **Define outputs.** Specify what the agent should return when the delegated work is complete.
 6. **Define authority and boundaries.** State what the agent may decide, what it must not do, and when it must escalate.
 7. **Reference skills when needed.** Agents may use skills as playbooks; they should not duplicate skill workflows.
+8. **Ground work in context.** An agent should use the provided request, repository context, relevant files, and referenced skills before making assumptions.
+9. **Verify before returning.** An agent should check that its output satisfies the delegated responsibility and respects its boundaries.
 
 ## Relationship To Skills
 
@@ -55,7 +57,7 @@ Examples:
 - [Work this agent is accountable for]
 - [Work this agent is accountable for]
 
-## Skills To Use
+## Relevant Skills
 
 - [Skill name, if applicable]
 
@@ -65,18 +67,19 @@ Examples:
 
 ## Boundaries
 
+- State what the agent may decide independently, what it may only recommend, and what requires approval.
 - Do not [decision/action outside scope].
 - Ask for approval before [risky action].
 - Escalate when [condition].
 
 ## Verification
 
-Before finishing:
+Before returning, confirm:
 
-- [ ] Output satisfies the delegated responsibility.
+- [ ] The output satisfies the delegated responsibility.
 - [ ] Required inputs were used or missing inputs were called out.
-- [ ] Relevant skills were used when applicable.
-- [ ] Boundaries and escalation rules were followed.
+- [ ] Relevant repository context, files, and skills were considered when applicable.
+- [ ] Boundaries, approval requirements, and escalation rules were followed.
 ```
 
 ## Red Flags
@@ -88,3 +91,18 @@ Before finishing:
 - The agent defines step-by-step task procedure better suited to a skill.
 - The output format is unclear when consistency matters.
 - The agent has authority to approve, merge, deploy, or delete without explicit permission.
+
+## Verification
+
+Before accepting a new or changed agent, confirm:
+
+- [ ] The agent has a specific specialist responsibility.
+- [ ] Delegation triggers and false positives are clear.
+- [ ] Required inputs are explicit.
+- [ ] Responsibilities do not duplicate a skill workflow.
+- [ ] Relevant skills are referenced instead of copied.
+- [ ] Output format is defined or explicitly delegated to the request.
+- [ ] Decision authority, approval requirements, and escalation conditions are clear.
+- [ ] The agent does not overlap unnecessarily with another agent.
+- [ ] The agent can be tested with representative delegation examples.
+- [ ] Each section changes delegation or execution behavior; remove generic persona text, duplicated rules, and stale guidance.
