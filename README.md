@@ -11,6 +11,7 @@ AGENTS.md                  Shared instructions for Codex-style agents
 CLAUDE.md                  Shared instructions for Claude
 guidelines/                Skill and agent authoring guidelines
 skills/<skill>/SKILL.md    Reusable skill definitions
+.agents/skills/            Codex discovery links to selected repo skills
 scripts/validate-repo.js   Lightweight repository validator
 ```
 
@@ -18,6 +19,16 @@ scripts/validate-repo.js   Lightweight repository validator
 
 - `skills/author-agent-skill`: Use this when creating or improving agent skills in this repository.
 - `skills/get-youtube-transcription`: Use this when fetching a transcript for one YouTube video ID or URL.
+
+For Codex desktop or CLI, `get-youtube-transcription` is exposed through `.agents/skills`.
+After opening this repository in Codex, invoke it explicitly with:
+
+```text
+$get-youtube-transcription <youtube-video-id-or-url>
+```
+
+For reusable local secrets, create `~/.config/agents-skills/youtube-transcription.env`
+with the same keys shown in `skills/get-youtube-transcription/.env.example`.
 
 ## Principles
 

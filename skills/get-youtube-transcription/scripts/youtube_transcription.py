@@ -7,6 +7,7 @@ Requires Webshare proxy credentials:
 
 Optional:
     WEBSHARE_PROXY_LOCATIONS defaults to "us,ca"
+    YOUTUBE_TRANSCRIPTION_ENV_FILE overrides the default env file location
 
 Usage:
     python3 youtube_transcription.py dQw4w9WgXcQ
@@ -94,11 +95,13 @@ def load_local_env() -> None:
     """Load local skill credentials if they were not exported by the shell."""
     script_path = Path(__file__).resolve()
     skill_dir = script_path.parents[1]
+    user_env_path = Path("~/.config/agents-skills/youtube-transcription.env").expanduser()
 
     configured_path = os.environ.get("YOUTUBE_TRANSCRIPTION_ENV_FILE")
     if configured_path:
         load_env_file(Path(configured_path).expanduser())
 
+    load_env_file(user_env_path)
     load_env_file(skill_dir / ".env")
 
 
