@@ -1,6 +1,6 @@
 # Claude Instructions
 
-This repository stores reusable software-development agent skills and future agent descriptions.
+This repository stores AI harness guidelines, reusable software-development agent skills, future agent descriptions, and harness strategy notes.
 
 Follow the same source files used by Codex:
 

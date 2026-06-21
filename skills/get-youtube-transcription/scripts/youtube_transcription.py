@@ -95,13 +95,17 @@ def load_local_env() -> None:
     """Load local skill credentials if they were not exported by the shell."""
     script_path = Path(__file__).resolve()
     skill_dir = script_path.parents[1]
-    user_env_path = Path("~/.config/agents-skills/youtube-transcription.env").expanduser()
+    user_env_paths = [
+        Path("~/.config/ai-harness/youtube-transcription.env").expanduser(),
+        Path("~/.config/agents-skills/youtube-transcription.env").expanduser(),
+    ]
 
     configured_path = os.environ.get("YOUTUBE_TRANSCRIPTION_ENV_FILE")
     if configured_path:
         load_env_file(Path(configured_path).expanduser())
 
-    load_env_file(user_env_path)
+    for user_env_path in user_env_paths:
+        load_env_file(user_env_path)
     load_env_file(skill_dir / ".env")
 
 

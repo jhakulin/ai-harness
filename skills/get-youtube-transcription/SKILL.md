@@ -12,12 +12,12 @@ Fetch the available YouTube transcript for one video ID or URL and return the tr
 ## Workflow
 
 1. Confirm the request contains exactly one YouTube video ID or YouTube URL. If no usable input is present or multiple videos are requested, ask for a single video ID or URL.
-2. Ensure Webshare credentials are available through exported environment variables, `~/.config/agents-skills/youtube-transcription.env`, or `skills/get-youtube-transcription/.env`. Use `.env.example` as the placeholder format; do not commit real credentials.
+2. Ensure Webshare credentials are available through exported environment variables, `~/.config/ai-harness/youtube-transcription.env`, or `skills/get-youtube-transcription/.env`. Use `.env.example` as the placeholder format; do not commit real credentials.
 3. Run the bundled wrapper from the repository root:
    ```bash
    skills/get-youtube-transcription/scripts/run_youtube_transcription.sh "<video-id-or-url>"
    ```
-   The wrapper creates or reuses a persistent virtualenv at `~/.cache/agents-skills/venvs/youtube-transcription` and installs `skills/get-youtube-transcription/requirements.txt` there when needed.
+   The wrapper creates or reuses a persistent virtualenv at `~/.cache/ai-harness/venvs/youtube-transcription` and installs `skills/get-youtube-transcription/requirements.txt` there when needed.
 4. If dependency or Webshare configuration errors occur, report the missing requirement without exposing credentials.
 5. If YouTube reports that the transcript is disabled, missing, or the video is unavailable, report that specific failure.
 6. Return the transcript text from stdout. Do not summarize or rewrite it unless the user explicitly asks.

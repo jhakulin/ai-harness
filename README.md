@@ -1,15 +1,15 @@
-# agents-skills
+# ai-harness
 
-Minimal, tool-neutral source repository for software-development agent descriptions and reusable agent skills.
+Minimal, tool-neutral source repository for AI harness guidelines, reusable agent skills, agent definitions, and harness strategy notes for software development.
 
-The repository is intentionally small at first. Add new skills and agents only when there is a concrete use case, a clear trigger, and a repeatable workflow worth preserving.
+The repository is intentionally small at first. Add new guidelines, skills, agents, and strategy notes only when there is a concrete use case, a clear trigger, and reusable value worth preserving.
 
 ## Structure
 
 ```text
 AGENTS.md                  Shared instructions for Codex-style agents
 CLAUDE.md                  Shared instructions for Claude
-guidelines/                Skill and agent authoring guidelines
+guidelines/                AI harness, skill, and agent authoring guidelines
 skills/<skill>/SKILL.md    Reusable skill definitions
 .agents/skills/            Codex discovery links to selected repo skills
 scripts/validate-repo.js   Lightweight repository validator
@@ -28,11 +28,11 @@ After Codex reloads skills, invoke it explicitly with:
 $get-youtube-transcription <youtube-video-id-or-url>
 ```
 
-For reusable local secrets, create `~/.config/agents-skills/youtube-transcription.env`
+For reusable local secrets, create `~/.config/ai-harness/youtube-transcription.env`
 with the same keys shown in `skills/get-youtube-transcription/.env.example`.
 
 The skill wrapper reuses a persistent virtualenv at
-`~/.cache/agents-skills/venvs/youtube-transcription`, so dependency installation should only be needed once per machine.
+`~/.cache/ai-harness/venvs/youtube-transcription`, so dependency installation should only be needed once per machine.
 
 ## Principles
 

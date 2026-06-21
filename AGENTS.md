@@ -1,6 +1,6 @@
 # Agent Instructions
 
-Use this repository as the canonical source for reusable software-development agent skills and agent descriptions.
+Use this repository as the canonical source for AI harness guidelines, reusable software-development agent skills, agent descriptions, and harness strategy notes.
 
 ## Operating Rules
 
