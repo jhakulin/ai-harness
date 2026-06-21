@@ -21,7 +21,8 @@ scripts/validate-repo.js   Lightweight repository validator
 - `skills/get-youtube-transcription`: Use this when fetching a transcript for one YouTube video ID or URL.
 
 For Codex desktop or CLI, `get-youtube-transcription` is exposed through `.agents/skills`.
-After opening this repository in Codex, invoke it explicitly with:
+It can also be registered globally by symlinking the skill into `~/.agents/skills`.
+After Codex reloads skills, invoke it explicitly with:
 
 ```text
 $get-youtube-transcription <youtube-video-id-or-url>
@@ -29,6 +30,9 @@ $get-youtube-transcription <youtube-video-id-or-url>
 
 For reusable local secrets, create `~/.config/agents-skills/youtube-transcription.env`
 with the same keys shown in `skills/get-youtube-transcription/.env.example`.
+
+The skill wrapper reuses a persistent virtualenv at
+`~/.cache/agents-skills/venvs/youtube-transcription`, so dependency installation should only be needed once per machine.
 
 ## Principles
 
