@@ -18,9 +18,9 @@ Fetch the available YouTube transcript for one video ID or URL and return the tr
    skills/get-youtube-transcription/scripts/run_youtube_transcription.sh "<video-id-or-url>"
    ```
    The wrapper creates or reuses a persistent virtualenv at `~/.cache/agents-skills/venvs/youtube-transcription` and installs `skills/get-youtube-transcription/requirements.txt` there when needed.
-5. If dependency or Webshare configuration errors occur, report the missing requirement without exposing credentials.
-6. If YouTube reports that the transcript is disabled, missing, or the video is unavailable, report that specific failure.
-7. Return the transcript text from stdout. Do not summarize or rewrite it unless the user explicitly asks.
+4. If dependency or Webshare configuration errors occur, report the missing requirement without exposing credentials.
+5. If YouTube reports that the transcript is disabled, missing, or the video is unavailable, report that specific failure.
+6. Return the transcript text from stdout. Do not summarize or rewrite it unless the user explicitly asks.
 
 ## Output Format
 
