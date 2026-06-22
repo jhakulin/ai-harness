@@ -19,7 +19,7 @@ The recommended strategy is:
 
 Core principle:
 
-> AI agents can perform work, but named humans and teams remain accountable for the outcome.
+> AI agents are part of the engineering workforce: they plan, implement, review, test, and document work, while humans and teams remain accountable for intent, risk, quality, and business impact.
 
 ## Increment 0: Establish Direction and Governance
 
