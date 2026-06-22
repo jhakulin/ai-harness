@@ -10,6 +10,7 @@ The repository is intentionally small at first. Add new guidelines, skills, agen
 AGENTS.md                  Shared instructions for Codex-style agents
 CLAUDE.md                  Shared instructions for Claude
 guidelines/                AI harness, skill, and agent authoring guidelines
+strategies/                AI harness adoption and operating-model strategy notes
 skills/<skill>/SKILL.md    Reusable skill definitions
 .agents/skills/            Codex discovery links to selected repo skills
 scripts/validate-repo.js   Lightweight repository validator
@@ -33,6 +34,10 @@ with the same keys shown in `skills/get-youtube-transcription/.env.example`.
 
 The skill wrapper reuses a persistent virtualenv at
 `~/.cache/ai-harness/venvs/youtube-transcription`, so dependency installation should only be needed once per machine.
+
+## Strategies
+
+- `strategies/ai-native-engineering-increments.md`: Incremental adoption plan for AI-native engineering.
 
 ## Principles
 
