@@ -1,20 +1,21 @@
-# AI-Native Engineering: Incremental Adoption Model
+# AI-Native Engineering: Incremental Adoption Plan
 
 ## Purpose
 
-This document outlines a practical model for moving from conventional software engineering toward AI-native engineering. The goal is to help an engineering organization safely and effectively delegate work to AI agents while preserving human accountability, product quality, and adaptability.
+This document outlines a practical path for moving from conventional software engineering toward AI-native engineering. The goal is to build an engineering organization that can safely and effectively delegate work to AI agents while preserving human accountability, product quality, and adaptability.
 
 ## Strategic Position
 
-AI-assisted engineering can become a normal part of how software organizations build and maintain systems. A practical adoption model should provide supported defaults while preserving enough flexibility to evaluate new tools and practices as the field evolves.
+AI-assisted engineering should become a normal part of how the company builds software. The company should provide a supported default path while maintaining enough flexibility to adopt better tools and practices as the field evolves.
 
 The recommended strategy is:
 
 - Standardize governance, accountability, security, and review expectations.
-- Provide default supported tools where standardization helps.
+- Provide default supported tools for broad adoption.
 - Allow approved alternatives when they meet the same governance requirements.
 - Encourage controlled experimentation by engineers and teams.
-- Use spec-driven development to improve the quality of AI-assisted work.
+- Use spec-driven development to improve the quality of AI-generated work.
+- Develop harness engineering as a core capability for making agent work reliable and scalable.
 - Shift review from code-only inspection toward intent, evidence, risk, and proof.
 
 Core principle:
@@ -23,26 +24,28 @@ Core principle:
 
 ## Increment 0: Establish Direction and Governance
 
-The organization establishes AI-assisted engineering as a strategic capability.
+The company formally commits to using AI-assisted engineering as a strategic capability.
 
-This increment creates the foundation for adoption. It should clarify that AI usage is supported, but must happen within clear boundaries for security, accountability, data handling, and quality.
+This increment creates the foundation for adoption. It should clarify that AI usage is expected, but must happen within clear boundaries for security, accountability, data handling, and quality.
 
 Key outcomes:
 
-- Organization position on AI-assisted engineering.
+- Company position on AI-assisted engineering.
 - Open but governed tooling strategy.
 - Default supported tools and experimental tool lanes.
 - Human accountability model for AI-assisted work.
 - Data, security, and permission boundaries.
 - Initial guidance for agent harnesses and spec-driven development.
+- Initial definition of harness engineering practices.
 
 Tooling stance:
 
-- An organization may define a primary supported harness, such as Claude Code, Codex, or another approved tool.
-- Alternatives such as Pi, OpenCode, custom harnesses, or future tools may be approved if they meet governance requirements.
+- The company may define a primary supported harness, such as Claude Code.
+- Alternatives such as Codex, Pi, OpenCode, or future tools may be approved if they meet governance requirements.
 - Spec-driven development frameworks such as GitHub Spec Kit and OpenSpec should be evaluated as part of the delivery model, not as isolated tools.
+- Harness engineering should be treated as the practice of shaping context, tools, guardrails, and review loops so agents can produce aligned work with less human interruption.
 
-Adoption message:
+Management message:
 
 > AI-assisted engineering is a strategic capability. We will scale it through clear ownership, responsible tooling, and measurable delivery quality.
 
@@ -69,13 +72,13 @@ Expected behavior change:
 
 Key practices:
 
-- Use approved or experimental tools within organizational policy.
+- Use approved or experimental tools within company policy.
 - Keep sensitive data out of unapproved systems.
 - Use repository instructions, such as `AGENTS.md`, where appropriate.
 - Use lightweight spec-driven practices to clarify intent before asking agents to implement.
 - Review and verify agent output before submitting it.
 - Develop reusable skills, prompts, or workflow patterns for repeated engineering tasks.
-- Contribute useful assets to the organization's shared AI registry.
+- Contribute useful assets to the company's shared AI registry.
 - Share useful workflows with the team.
 
 Success signal:
@@ -95,13 +98,14 @@ Key shifts:
 - QA uses AI to improve test strategy, edge-case discovery, and verification.
 - Teams agree how agents participate in planning, implementation, review, and proof generation.
 - Teams identify low-risk tasks where agents can work AFK under clear review boundaries.
+- Teams make implicit quality expectations explicit through specs, repository instructions, runbooks, review personas, tests, and guardrails.
 - Specs and proof become shared review artifacts.
 
 Spec-driven development approach:
 
 - Use GitHub Spec Kit for larger, cross-team, higher-risk, or governance-heavy work.
 - Use OpenSpec for lighter, brownfield, faster-moving team work.
-- Use internal skills and plugins only as organization-specific adapters, not as a competing SDD framework.
+- Use internal skills and plugins only as company-specific adapters, not as a competing SDD framework.
 
 Review shift:
 
@@ -133,6 +137,7 @@ Example workflows:
 - Produce proof for a frontend or backend change.
 - Run a second-model review before human approval.
 - Open a PR with implementation notes and verification evidence.
+- Convert repeated review feedback into durable guardrails, tests, lints, instructions, or reviewer-agent checks.
 
 Governance requirements:
 
@@ -159,7 +164,7 @@ Agents can perform scoped work asynchronously, including AFK execution, while hu
 
 AI becomes part of the normal engineering system, not only a productivity aid.
 
-At this stage, the organization manages human-agent collaboration as an operating model. Engineering teams continuously improve how agents are used, governed, reviewed, and integrated into delivery.
+At this stage, the company manages human-agent collaboration as an operating model. Engineering teams continuously improve how agents are used, governed, reviewed, and integrated into delivery.
 
 Operating model characteristics:
 
@@ -167,9 +172,10 @@ Operating model characteristics:
 - Agent-supported delivery pipelines.
 - Proof-based review.
 - Automated quality checks.
-- Reusable organization skills and plugins.
+- Reusable company skills and plugins.
 - Common SDD standards.
 - Common harness governance.
+- Harness engineering practices for context, guardrails, proof, and feedback capture.
 - Continuous tool evaluation.
 - Agent lifecycle management.
 
@@ -184,13 +190,20 @@ Agent lifecycle expectations:
 - Periodic recertification.
 - Retirement path.
 
-Broader organizational impact:
+Continuous improvement expectations:
+
+- Treat the repository, documentation, specs, and examples as part of the agent context.
+- Reduce inconsistent patterns that make agent output less reliable.
+- Capture repeated agent mistakes, review comments, failed builds, and production issues as signals for missing context or guardrails.
+- Move recurring feedback into durable automation where possible.
+
+Broader company impact:
 
 Once engineering has established safe AI-native practices, the same operating model can support other functions such as support, operations, finance, compliance, product analytics, and internal tooling.
 
 Success signal:
 
-The organization is no longer merely using AI tools. It can safely delegate work to AI systems while preserving accountability, quality, and adaptability.
+The company is no longer merely using AI tools. It can safely delegate work to AI systems while preserving accountability, quality, and adaptability.
 
 ## Summary
 
