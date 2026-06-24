@@ -1,4 +1,4 @@
-# AI-Native Engineering: Incremental Adoption Plan
+# AI-Native Engineering: Phased Adoption Plan
 
 ## Purpose
 
@@ -22,11 +22,11 @@ Core principle:
 
 > AI agents are part of the engineering workforce: they plan, implement, review, test, and document work, while humans and teams remain accountable for intent, risk, quality, and business impact.
 
-## Increment 0: Establish Direction and Governance
+## Phase 0: Establish Direction and Governance
 
 The company formally commits to using AI-assisted engineering as a strategic capability.
 
-This increment creates the foundation for adoption. It should clarify that AI usage is expected, but must happen within clear boundaries for security, accountability, data handling, and quality.
+This phase creates the foundation for adoption. It should clarify that AI usage is expected, but must happen within clear boundaries for security, accountability, data handling, and quality.
 
 Key outcomes:
 
@@ -49,7 +49,7 @@ Management message:
 
 > AI-assisted engineering is a strategic capability. We will scale it through clear ownership, responsible tooling, and measurable delivery quality.
 
-## Increment 1: AI-Assisted Individual Engineering
+## Phase 1: AI-Assisted Individual Engineering
 
 Engineers adopt AI agents in their daily personal workflow.
 
@@ -85,7 +85,7 @@ Success signal:
 
 Engineers can reliably use AI agents for meaningful work, and useful individual practices start becoming reusable assets for teams.
 
-## Increment 2: AI-Assisted Team Delivery
+## Phase 2: AI-Assisted Team Delivery
 
 Teams establish shared practices for how product owners, engineers, QA, architects, and AI agents work together.
 
@@ -121,7 +121,7 @@ Success signal:
 
 Teams collaborate around intent, specs, acceptance criteria, tests, screenshots, API traces, and other evidence instead of relying only on tickets and code diffs. Teams also have initial AFK practices for selected tasks that prepare them for governed asynchronous workflows.
 
-## Increment 3: Governed Agentic Workflows
+## Phase 3: Governed Agentic Workflows
 
 Agents begin taking larger, scoped tasks from humans inside controlled team workflows.
 
@@ -160,7 +160,7 @@ Success signal:
 
 Agents can perform scoped work asynchronously, including AFK execution, while humans remain in control of intent, risk, and acceptance.
 
-## Increment 4: AI-Native Engineering Operating Model
+## Phase 4: AI-Native Engineering Operating Model
 
 AI becomes part of the normal engineering system, not only a productivity aid.
 
