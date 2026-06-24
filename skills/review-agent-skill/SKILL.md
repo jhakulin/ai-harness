@@ -33,6 +33,10 @@ Review an agent skill against the current repository skill guideline and report 
 
 ## Output Format
 
+Write findings in a neutral, factual register. State the issue as an observation, its effects plainly, and the fix as recommendation.
+Presice descriptive words that carry information are fine, avoid empty words that only convey feeling; the severity label conveys importance.
+Do not soften warnings into open questions, and do not add praise, apology or filler.
+
 ```text
 # Skill Review: [name]
 
@@ -60,6 +64,8 @@ Review an agent skill against the current repository skill guideline and report 
 - Do not invent review criteria outside the current guideline and repository guidelines.
 - Do not approve a vague workflow just because the writing is polished.
 - Prefer a short review with strong findings over an exhaustive line edit.
+- Keep findings neutral and factual.
+- Use precise descriptive words that carry information. Avoid empty ranking words; the severity label conveys importance.
 
 ## Verification
 
