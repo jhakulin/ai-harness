@@ -38,6 +38,7 @@ The skill wrapper reuses a persistent virtualenv at
 ## Strategies
 
 - `strategies/ai-native-engineering-phases.md`: Phased adoption plan for AI-native engineering.
+- `strategies/ai-native-engineering-workshop.md`: Workshop format for becoming an AI-native engineering organization.
 
 ## Principles
 
