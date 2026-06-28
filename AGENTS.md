@@ -12,21 +12,6 @@ Use this repository as the canonical source for AI harness guidelines, reusable 
 - Prefer improving one existing skill over adding overlapping skills.
 - Keep each source of truth in one place; reference guidelines instead of duplicating their criteria in skills or docs.
 
-## Skill Format
-
-Each skill lives in `skills/<name>/SKILL.md` and must include YAML frontmatter:
-
-```yaml
----
-name: example-skill
-description: What the skill does. Use when...
----
-```
-
-For skill quality, structure, scope, supporting files, and review criteria, use `guidelines/skill-guideline.md` as the source of truth.
-
-For agent role, delegation, responsibility, boundary, and output criteria, use `guidelines/agent-guideline.md` as the source of truth.
-
 ## Collaboration Rules
 
 - If the user asks for a proposal, do not create or edit files until they approve it.
