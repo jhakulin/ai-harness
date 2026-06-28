@@ -127,6 +127,8 @@ Governance requirements:
 - Agent instructions, specs, and source material are maintained.
 - Shared workflows have lightweight evals, simulations, or examples to catch regressions.
 - Sensitive data, credentials, and production access use limited permissions, redaction, isolated tools, or explicit approval.
+- Multi-agent workflows are used only when roles are truly separable, each agent has the context needed for its task, and the split improves quality, safety, speed, or reviewability.
+- Teams avoid splitting agents only to mirror team boundaries or to make the design feel simpler while reducing the context available for good decisions.
 
 Human role:
 
@@ -136,10 +138,6 @@ Human role:
 - Accept or reject agent output.
 - Improve the workflow itself.
 - Approve agent-suggested changes to instructions, prompts, guardrails, or workflows unless the change is low-risk and pre-approved.
-
-Multi-agent guidance:
-
-Prefer one well-contextualized workflow before introducing multiple agents. Split work across agents only when the tasks are truly separable and the split does not remove context needed for good decisions.
 
 Success signal:
 
