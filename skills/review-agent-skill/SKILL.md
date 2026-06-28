@@ -20,7 +20,7 @@ Review an agent skill against the current repository skill guideline and report 
    - Do not rely on memory of earlier guideline versions.
 
 3. Inspect the skill in context.
-   - If reviewing an existing repository skill, check nearby skill names and repository guidelines for overlap or naming conflicts.
+   - If reviewing an existing repository skill, list `skills/*/SKILL.md`, compare skill names and frontmatter descriptions for overlap or naming conflicts, and read `AGENTS.md` for repository-level requirements.
    - If reviewing a proposal, evaluate only what is present and call out missing information as an assumption.
 
 4. Produce findings.
@@ -34,7 +34,7 @@ Review an agent skill against the current repository skill guideline and report 
 ## Output Format
 
 Write findings in a neutral, factual register. State the issue as an observation, its effects plainly, and the fix as recommendation.
-Presice descriptive words that carry information are fine, avoid empty words that only convey feeling; the severity label conveys importance.
+Precise descriptive words that carry information are fine, avoid empty words that only convey feeling; the severity label conveys importance.
 Do not soften warnings into open questions, and do not add praise, apology or filler.
 
 ```text
