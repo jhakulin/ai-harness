@@ -6,7 +6,7 @@ This document outlines a practical path for moving from conventional software en
 
 ## Strategic Position
 
-Every employee is expected to build capability to work effectively with AI. This means understanding where AI can improve their work, where it creates risks, how to verify its output, and how to improve workflows utilizing AI.
+Every employee is expected to build capability to work effectively with AI: where it helps, where it creates risk, how to verify output, and how to improve workflows.
 
 The recommended strategy is:
 
@@ -15,7 +15,7 @@ The recommended strategy is:
 - Provide default supported tools for broad adoption, while staying open to alternatives that meet the governance bar. Prefer adopting and extending common and popular AI engineering tools over investing heavily in company-specific alternatives from scratch unless there is a clear reason.
 - Encourage engineers and teams to experiment with AI, evaluating which workflows, harness usage, guardrails, models, and review practices produce the best results.
 - Use lightweight and iterative spec-driven development practices to clarify the intent, constraints, and proof before AI-assisted implementation work.
-- Develop AI harness engineering as a core capability that helps engineers work more effectively with AI and turn reusable AI assets like prompts, skills, tests and evaluations, workflow improvements, and guardrails into shared engineering assets that improve engineering organization productivity.
+- Develop AI harness engineering as a core capability for turning reusable prompts, skills, tests, evaluations, workflow improvements, and guardrails into shared engineering assets.
 
 Core principle:
 
@@ -23,7 +23,7 @@ Core principle:
 
 ## Phase 0: Diagnose and Establish Direction
 
-This phase creates the foundation for AI-assisted engineering adoption by clarifying where the company is today, where it targets to go, who owns the transformation, and how AI-assisted work is governed across tools, data, permissions, review, and quality.
+Clarify the current state, target direction, transformation ownership, and governance for tools, data, permissions, review, and quality.
 
 Key outcomes:
 
@@ -42,9 +42,7 @@ Management message:
 
 ## Phase 1: AI-Assisted Engineering Fluency
 
-Engineers adopt AI agents in their daily personal workflow.
-
-The focus is to build fluency. Engineers continuously learn how to use AI to assist their work, keep up with relevant advances in AI-assisted engineering, and remain responsible for the submitted work.
+Engineers build fluency by using AI in daily work while remaining responsible for submitted output.
 
 Typical use cases for AI collaboration:
 
@@ -81,9 +79,7 @@ Success signal:
 
 ## Phase 2: AI-Assisted Team Delivery
 
-Teams establish shared practices for how product owners, engineers, QA, architects, and AI agents work together.
-
-This is where AI use moves from individual productivity to team delivery. Product intent, engineering design, quality expectations, and implementation work become more connected through specs, agents, and proof.
+Teams move from individual AI use to shared delivery practices across product, engineering, QA, architecture, and AI agents.
 
 Key shifts:
 
@@ -106,9 +102,7 @@ Success signal:
 
 ## Phase 3: Governed Agentic Workflows
 
-Agents begin taking larger, scoped tasks from humans inside controlled team workflows.
-
-This is the transition from interactive AI assistance to delegated AI work. Agents may work asynchronously and can be triggered through GitHub Actions or similar automation workflows.
+Agents begin taking scoped asynchronous tasks inside controlled team workflows, such as GitHub Actions or similar automation.
 
 Example workflows:
 
@@ -145,9 +139,7 @@ Agents can perform scoped work asynchronously, including AFK execution, while hu
 
 ## Phase 4: AI-Native Engineering Operating Model
 
-AI becomes part of the normal engineering system, not only a productivity aid.
-
-At this stage, the company manages human-agent collaboration as an operating model. Engineering teams continuously improve how agents are used, governed, reviewed, and integrated into delivery.
+AI becomes part of the engineering operating model. Teams continuously improve how agents are used, governed, reviewed, and integrated into delivery.
 
 Operating model characteristics:
 
@@ -198,4 +190,4 @@ The adoption path is:
 4. Introduce governed asynchronous agent workflows.
 5. Mature into an AI-native engineering operating model.
 
-The strategic objective is to build an organization that can continuously improve how humans and AI agents work together to deliver better software.
+The objective is an organization that continuously improves how humans and AI agents work together to deliver better software.
