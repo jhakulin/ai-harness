@@ -9,7 +9,6 @@ Use this repository as the canonical source for AI harness guidelines, reusable 
 - Keep changes minimal and grounded in an explicit user need.
 - Before adding new folders, integrations, adapters, commands, hooks, or generated metadata, propose the exact structure and wait for approval.
 - Do not copy, mirror, or bulk-import external repositories unless explicitly requested.
-- Do not add tool-specific integration folders unless explicitly requested.
 - Prefer improving one existing skill over adding overlapping skills.
 - Keep each source of truth in one place; reference guidelines instead of duplicating their criteria in skills or docs.
 
