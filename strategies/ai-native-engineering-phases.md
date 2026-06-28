@@ -6,72 +6,67 @@ This document outlines a practical path for moving from conventional software en
 
 ## Strategic Position
 
-AI-assisted engineering should become a normal part of how the company builds software. The company should provide a supported default path while maintaining enough flexibility to adopt better tools and practices as the field evolves.
+Every employee is expected to build capability to work effectively with AI. This means understanding where AI can improve their work, where it creates risks, how to verify its output and how to improve workflows utlixing AI.
 
 The recommended strategy is:
 
-- Standardize governance, accountability, security, and review expectations.
-- Provide default supported tools for broad adoption.
-- Allow approved alternatives when they meet the same governance requirements.
-- Encourage controlled experimentation by engineers and teams.
-- Use spec-driven development to improve the quality of AI-generated work.
-- Develop harness engineering as a core capability for making agent work reliable and scalable.
-- Shift review from code-only inspection toward intent, evidence, risk, and proof.
+- Build broad AI-fluency accorss employees, roles and teams
+- Define how AI assisted work is owned, reviewed, verified and accepted, icluding who is accountable for quality, safety and impact of the outcome.
+- Provide default supported tools for broad adoption, while staying oprn to alternatives that meet the governance bar. Prefer adopting and extending comon and popular AI engineering tools over investing heavily on company-specific alternatives from scratch unless there is clear reason.
+- Encourage engineers and teams experiment with AI, evaluating which workflows, harness usage, quardrails, models and review practices produce best results.
+- Use light-weight and iterative spec-driven development practices to clarify the intent, constraints and proof before AI assisted implementation work.
+- Develop AI harness engineering as a core capability that helps engineers to work more effectively with AI and turn reusable AI asset like prompts, skills, tests & evaluations, workflow improvements and guardrails into shared engineering assets that improve engineering organization productivity.
 
 Core principle:
 
-> AI agents are part of the engineering workforce: they plan, implement, review, test, and document work, while humans and teams remain accountable for intent, risk, quality, and business impact.
+> AI agents are part of the engineering workforce. Teams collaborate with AI to analyze problems, explore options, plan, implement, review, test and document the work while retaining ownership of intent, architeture,,risk, quality and buisness impact.
 
-## Phase 0: Establish Direction and Governance
+## Phase 0: Diagnose and Establish Direction
 
-The company formally commits to using AI-assisted engineering as a strategic capability.
-
-This phase creates the foundation for adoption. It should clarify that AI usage is expected, but must happen within clear boundaries for security, accountability, data handling, and quality.
+This phase creates the foundation for AI assistend engineering adoption by clarifing where the company is today, where it targets to go, who are the onwers in the transformation and how AI assisted work is governed across tools, data, permissions, review and quality. 
 
 Key outcomes:
 
-- Company position on AI-assisted engineering.
-- Open but governed tooling strategy.
-- Default supported tools and experimental tool lanes.
-- Human accountability model for AI-assisted work.
-- Data, security, and permission boundaries.
+- Company and leadership position on AI-assisted engineering as strategic capability.
+- Baseline of current AI adoption, delivery flow, review bottlenecks, quality outcomes, and areas where AI is currently a multiplier or a tax.
+- Nade ownership for AI-native engineering transformation, including eablement, measurement and governance.
+- Company-wide requirement that employees develop the capaility to use AI effectively i their work and in team workflows
+- Open but governed tooling strategy with default supported tools and experimental tool lanes.
+- Ownership rules for AI-assisted work, including responsibility for outputs, approvals, shared workflows and ongoing maintenance.
 - Initial guidance for agent harnesses and spec-driven development.
 - Initial definition of harness engineering practices.
-
-Tooling stance:
-
-- The company may define a primary supported harness, such as Claude Code.
-- Alternatives such as Codex, Pi, OpenCode, or future tools may be approved if they meet governance requirements.
-- Spec-driven development frameworks such as GitHub Spec Kit and OpenSpec should be evaluated as part of the delivery model, not as isolated tools.
-- Harness engineering should be treated as the practice of shaping context, tools, guardrails, and review loops so agents can produce aligned work with less human interruption.
 
 Management message:
 
 > AI-assisted engineering is a strategic capability. We will scale it through clear ownership, responsible tooling, and measurable delivery quality.
 
-## Phase 1: AI-Assisted Individual Engineering
+## Phase 1: AI-Assisted Engineering Fluency
 
 Engineers adopt AI agents in their daily personal workflow.
 
-The focus is to build fluency. Engineers should learn how to use agents for real engineering tasks, keep up with relevant advances in AI-assisted engineering, and remain responsible for the submitted work.
+The focus is to build fluency. Engineers continuously learn how to use AI to assist their work, keep up with relevant advances in AI-assisted engineering, and remain responsible for the submitted work.
 
-Typical use cases:
+Typical use cases for AI collaboration:
 
+- Brainstorming
 - Codebase exploration.
-- Implementation support.
+- Solution option comparison
+- Architecture and interface exploration
+- Planning
+- Implementation.
 - Debugging.
 - Refactoring.
-- Test generation.
+- Test and proof generation.
 - Documentation.
-- PR preparation.
 - Learning unfamiliar systems.
 
 Expected behavior change:
 
-> Engineers stop treating AI as autocomplete and start treating it as a working partner.
+> Engineers treat AI as their working partner.
 
 Key practices:
 
+- Use AI as collaborator for problem analysis, finding solution options, architecture/design tradeofs and planning the work
 - Use approved or experimental tools within company policy.
 - Keep sensitive data out of unapproved systems.
 - Use repository instructions, such as `AGENTS.md`, where appropriate.
@@ -82,8 +77,7 @@ Key practices:
 - Share useful workflows with the team.
 
 Success signal:
-
-Engineers can reliably use AI agents for meaningful work, and useful individual practices start becoming reusable assets for teams.
+- Engineers achieve measurable productivity improvement from the AI collaboration. Example signals include reduced task cycle time, increased completed delivery items, higher verification coverage, faster onboarding to unfamiliar systems, increased amount of reusable AI asset (prompts, skills, or guardrail rules etc.) contributed to team adoption.
 
 ## Phase 2: AI-Assisted Team Delivery
 
@@ -107,19 +101,8 @@ Spec-driven development approach:
 - Use OpenSpec for lighter, brownfield, faster-moving team work.
 - Use internal skills and plugins only as company-specific adapters, not as a competing SDD framework.
 
-Review shift:
-
-From:
-
-> Do I understand every line of code?
-
-Toward:
-
-> Is the intent right, is the spec good, and does the proof show that it works?
-
 Success signal:
-
-Teams collaborate around intent, specs, acceptance criteria, tests, screenshots, API traces, and other evidence instead of relying only on tickets and code diffs. Teams also have initial AFK practices for selected tasks that prepare them for governed asynchronous workflows.
+- Team delivery productivity improves measurably: teams complete Epics, customer scenarios or quality improvements faster with AI assisted collaboration, while using specs, acceptance criteria, API traces and other proof to maintain quality. Teams also have initial practices to run selected tasks asynchronously with AI, away from keyboard.
 
 ## Phase 3: Governed Agentic Workflows
 
