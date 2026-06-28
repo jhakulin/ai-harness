@@ -17,35 +17,13 @@ pi-extensions/<name>/      Pi coding-agent extensions and specs
 scripts/validate-repo.js   Lightweight repository validator
 ```
 
-## Skills
+## Contents
 
-- `skills/author-agent-skill`: Use this when creating or improving agent skills in this repository.
-- `skills/get-youtube-transcription`: Use this when fetching a transcript for one YouTube video ID or URL.
+- `skills/`: Reusable agent skills with their own usage instructions and supporting files.
+- `pi-extensions/`: Pi coding-agent extensions, specs, and package files.
+- `strategies/`: Notes on AI-assisted engineering process, metrics, adoption phases, and workshops.
 
-For Codex desktop or CLI, `get-youtube-transcription` is exposed through `.agents/skills`.
-It can also be registered globally by symlinking the skill into `~/.agents/skills`.
-After Codex reloads skills, invoke it explicitly with:
-
-```text
-$get-youtube-transcription <youtube-video-id-or-url>
-```
-
-For reusable local secrets, create `~/.config/ai-harness/youtube-transcription.env`
-with the same keys shown in `skills/get-youtube-transcription/.env.example`.
-
-The skill wrapper reuses a persistent virtualenv at
-`~/.cache/ai-harness/venvs/youtube-transcription`, so dependency installation should only be needed once per machine.
-
-## Pi Extensions
-
-- `pi-extensions/web-search`: Exa-backed Pi extension for web search and URL reading.
-
-## Strategies
-
-- `strategies/ai-assisted-engineering-process.md`: Practical process for using AI agents in software development.
-- `strategies/ai-engineering-metrics.md`: Lightweight metrics for measuring AI use, value, and risk.
-- `strategies/ai-native-engineering-phases.md`: Phased adoption plan for AI-native engineering.
-- `strategies/ai-native-engineering-workshop.md`: Workshop format for becoming an AI-native engineering organization.
+See each folder for the current inventory and detailed usage.
 
 ## Principles
 
