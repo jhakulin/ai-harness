@@ -15,7 +15,7 @@ The recommended strategy is:
 - Provide default supported tools for broad adoption, while staying open to alternatives that meet the governance bar. Prefer adopting and extending common and popular AI engineering tools over investing heavily in company-specific alternatives from scratch unless there is a clear reason.
 - Encourage engineers and teams to experiment with AI, evaluating which workflows, harness usage, guardrails, models, and review practices produce the best results.
 - Use lightweight and iterative spec-driven development practices to clarify the intent, constraints, and proof before AI-assisted implementation work.
-- Develop AI harness engineering as a core capability for turning reusable prompts, skills, tests, evaluations, workflow improvements, and guardrails into shared engineering assets.
+- Develop AI harness engineering as a core capability for context engineering, reusable prompts, skills, tests, evaluations, workflow improvements, and guardrails.
 
 Core principle:
 
@@ -33,7 +33,7 @@ Key outcomes:
 - Company-wide requirement that employees develop the capability to use AI effectively in their work and in team workflows.
 - Open but governed tooling strategy with default supported tools and experimental tool lanes.
 - Ownership rules for AI-assisted work, including responsibility for outputs, approvals, shared workflows, and ongoing maintenance.
-- Initial guidance for agent harnesses and spec-driven development.
+- Initial guidance for agent harnesses, context engineering, and spec-driven development.
 - Initial definition of harness engineering practices.
 
 Management message:
@@ -68,6 +68,7 @@ Key practices:
 - Use approved or experimental tools within company policy.
 - Keep sensitive data out of unapproved systems.
 - Use repository instructions, such as `AGENTS.md`, where appropriate.
+- Give agents the context needed to act correctly, while avoiding irrelevant, stale, or conflicting context.
 - Use lightweight spec-driven practices to clarify intent before asking agents to implement.
 - Review and verify agent output before submitting it.
 - Develop reusable skills, prompts, or workflow patterns for repeated engineering tasks.
@@ -124,6 +125,8 @@ Governance requirements:
 - Outputs are traceable.
 - High-risk changes require human approval.
 - Agent instructions, specs, and source material are maintained.
+- Shared workflows have lightweight evals, simulations, or examples to catch regressions.
+- Sensitive data, credentials, and production access use limited permissions, redaction, isolated tools, or explicit approval.
 
 Human role:
 
@@ -132,6 +135,11 @@ Human role:
 - Review proof.
 - Accept or reject agent output.
 - Improve the workflow itself.
+- Approve agent-suggested changes to instructions, prompts, guardrails, or workflows unless the change is low-risk and pre-approved.
+
+Multi-agent guidance:
+
+Prefer one well-contextualized workflow before introducing multiple agents. Split work across agents only when the tasks are truly separable and the split does not remove context needed for good decisions.
 
 Success signal:
 
@@ -151,7 +159,8 @@ Operating model characteristics:
 - Common SDD standards.
 - Common harness governance.
 - Harness engineering practices for context, guardrails, proof, and feedback capture.
-- Continuous tool evaluation.
+- Lightweight monitors that flag missing proof, failed checks, sensitive changes, repeated failures, or policy violations.
+- Continuous tool and model evaluation.
 - Agent lifecycle management.
 
 Agent lifecycle expectations:
@@ -169,8 +178,9 @@ Continuous improvement expectations:
 
 - Treat the repository, documentation, specs, and examples as part of the agent context.
 - Reduce inconsistent patterns that make agent output less reliable.
-- Capture repeated agent mistakes, review comments, failed builds, and production issues as signals for missing context or guardrails.
+- Capture repeated agent mistakes, review comments, failed builds, and production issues as signals for missing context, evals, monitors, or guardrails.
 - Move recurring feedback into durable automation where possible.
+- Treat model choice as a quality, latency, cost, and capacity tradeoff; test important workflows when changing models.
 
 Broader company impact:
 

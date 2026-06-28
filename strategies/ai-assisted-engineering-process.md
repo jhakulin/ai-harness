@@ -54,6 +54,7 @@ The engineer and agent should establish:
 - what interfaces or boundaries matter
 - what tests or verification are needed
 - what risks or edge cases exist
+- what context the agent needs, and what context would be irrelevant or misleading
 
 The goal is to build enough shared context that the implementation request is constrained and specific.
 
@@ -96,7 +97,7 @@ A good implementation instruction includes:
 - constraints on unrelated changes
 - expected verification commands
 
-The more precise the context, the more guardrailed the agent's work becomes.
+The more precise and coherent the context, the more guardrailed the agent's work becomes. Avoid mixing stale, irrelevant, or conflicting instructions into the same task.
 
 ### 4. Review the diff like human-authored code
 
@@ -236,7 +237,7 @@ Use specs to clarify intent and constraints, but keep feedback loops short.
 
 Running many agents in parallel can help with exploration, but it also creates context-switching and review load.
 
-Use parallel agents when the outputs can be compared, discarded, or summarized. Avoid multiplying code changes faster than humans can understand them.
+Use parallel agents when the outputs can be compared, discarded, or summarized. Avoid splitting work across agents if the split removes context needed for good decisions. Avoid multiplying code changes faster than humans can understand them.
 
 ### Delegating understanding
 
@@ -287,6 +288,7 @@ An AI-assisted change is ready when:
 - the diff is reviewable
 - risks and limitations are visible
 - the code is maintainable by humans
+- repeated agent mistakes have been captured as possible improvements to prompts, instructions, tests, or guardrails
 
 ## Summary
 
