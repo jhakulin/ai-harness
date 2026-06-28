@@ -8,9 +8,11 @@ The goal is not to measure AI for its own sake. The goal is to answer practical 
 
 ## Measurement Principles
 
+- Start small. A monthly pulse survey, one optional PR label, and existing delivery or defect data are enough for the first version.
 - Prefer metrics teams already have: PR data, work item data, CI results, incident data, and short surveys.
 - Measure trends over time, not one-off numbers.
-- Measure value and risk together.
+- Pair important value signals with simple risk checks. For example, if cycle time improves, check that defects, rollbacks, review time, or AI-related incidents did not clearly worsen.
+- Do not require perfect attribution. It is enough to know whether AI use increased while delivery, quality, review burden, and incidents moved in a good or bad direction.
 - Do not use lines of code as a success metric.
 - Do not treat AI usage volume as proof of productivity.
 - Keep team-level metrics useful for improvement, not only leadership reporting.
@@ -21,19 +23,18 @@ These metrics show adoption and reach.
 
 Lightweight metrics:
 
-- Percentage of engineers using approved AI tools weekly or monthly.
+- Percentage of engineers using approved AI tools monthly.
 - Percentage of teams using AI in normal engineering work.
-- Number of AI-assisted PRs or work items.
-- Number of agent sessions or runs, where tooling makes this easy.
-- Number of teams with repository AI instructions, such as `AGENTS.md`.
+- Number of AI-assisted PRs or work items, if teams label them.
+- Number of agent sessions or runs, only where tooling reports this automatically.
 - Number of reusable prompts, skills, workflows, or guardrails shared.
 
 How to collect:
 
 - Monthly pulse survey.
-- Tool usage reports.
+- Tool usage reports, if available.
 - Optional PR or work item label, such as `ai-assisted`.
-- Shared AI asset registry.
+- Lightweight shared list of reusable AI assets.
 
 Caution:
 
@@ -72,20 +73,17 @@ These metrics show whether AI helps delivery flow.
 
 Lightweight metrics:
 
-- Median task cycle time.
 - Median PR cycle time.
 - Median time from PR open to merge.
-- Median time to first working draft.
 - Median time to resolve bugs.
-- Time to onboard to an unfamiliar codebase or component.
 - Completed work items for comparable work types.
+- Team-reported examples where AI shortened exploration, implementation, testing, or debugging.
 
 How to collect:
 
-- Issue tracker data.
 - Git/PR data.
-- CI and deployment timestamps.
-- Team self-report for time-to-first-draft or onboarding cases.
+- Issue tracker data, if already used consistently.
+- Team self-report for concrete examples where timing data is not available.
 
 Caution:
 
@@ -100,20 +98,16 @@ Lightweight metrics:
 - Escaped defects.
 - Reopened work items.
 - Rollbacks.
-- Failed deployments.
 - Production incidents.
-- CI failure rate for AI-assisted PRs.
-- Security findings in AI-assisted changes.
-- Flaky tests introduced.
-- Review comments related to correctness, design, or maintainability.
+- AI-related security or data incidents.
+- Team-reported examples of AI output causing quality or maintainability problems.
 
 How to collect:
 
 - Incident and defect tracking.
-- Deployment records.
-- CI history.
-- PR review data.
-- Security scanning results.
+- Deployment records, if available.
+- Security or data incident records.
+- Team retrospective notes.
 
 Useful question:
 
@@ -125,26 +119,21 @@ These metrics show whether teams verify AI-assisted work.
 
 Lightweight metrics:
 
-- Percentage of AI-assisted PRs with tests.
-- Percentage of AI-assisted PRs with manual verification notes.
-- Percentage of AI-assisted PRs with screenshots, traces, logs, or API examples.
-- Percentage of AI-assisted PRs with acceptance criteria linked or included.
-- Percentage of high-risk AI-assisted changes with explicit human approval.
-- Percentage of agent-generated PRs passing CI before human review.
+- Percentage of AI-assisted PRs with any verification proof.
+- Common proof types used: tests, manual notes, screenshots, traces, logs, API examples, or CI results.
+- High-risk AI-assisted changes with explicit human approval.
 
 How to collect:
 
-- PR template fields.
+- One PR template field for verification proof.
 - CI status.
-- Review checklist.
-- Work item links.
+- Work item links, if already used.
 
 Recommended PR template fields:
 
 ```text
 AI-assisted: yes/no
-Verification proof: tests / manual notes / screenshot / trace / logs / not applicable
-Human reviewed: yes/no
+Verification proof: tests / manual notes / screenshot / trace / logs / CI / not applicable
 ```
 
 Useful question:
@@ -158,19 +147,16 @@ These metrics show whether AI produces useful work or creates cleanup work.
 Lightweight metrics:
 
 - Median PR review time.
-- Number of review rounds per PR.
-- Percentage of AI-assisted PRs requiring major rewrite.
-- Percentage of agent-generated PRs accepted after review.
-- Percentage of agent-generated PRs closed without merge.
-- Average time to make an agent output mergeable.
+- Team-reported cases where AI output required major rewrite.
+- Percentage of agent-generated PRs accepted after review, if agent workflows exist.
 - Common repeated review comments on AI-assisted work.
 
 How to collect:
 
 - PR metadata.
-- Review labels, such as `major-rework` or `agent-output-rejected`.
 - Lightweight team retrospective.
-- Agent workflow logs.
+- Optional review labels, such as `major-rework` or `agent-output-rejected`.
+- Agent workflow logs, if agent workflows exist.
 
 Useful question:
 
@@ -185,14 +171,12 @@ Lightweight metrics:
 - Self-rated confidence using AI for engineering work.
 - Self-rated confidence verifying AI output.
 - Number of shared AI workflows contributed.
-- Number of teams with documented AI practices.
-- Participation in AI enablement sessions.
 - Examples of successful AI-assisted workflows shared across teams.
 
 How to collect:
 
 - Monthly or quarterly pulse survey.
-- Shared workflow registry.
+- Lightweight shared workflow list.
 - Engineering community notes.
 
 Recommended pulse survey:
@@ -217,16 +201,14 @@ Lightweight metrics:
 
 - Number of maintained prompts, skills, agents, workflows, evaluations, or guardrails.
 - Number of teams using shared AI assets.
-- Number of stale assets retired.
 - Number of repeated review comments converted into tests, lints, instructions, or guardrails.
 - Number of repository instructions added or improved.
 
 How to collect:
 
-- Shared registry.
+- Lightweight shared asset list.
 - Repository history.
 - Team retrospectives.
-- Workflow owner reports.
 
 Useful question:
 
@@ -239,19 +221,17 @@ These metrics apply when agents perform asynchronous or delegated work.
 Lightweight metrics:
 
 - Number of governed agent workflows.
-- Percentage of workflows with named owner, purpose, permissions, and approval rules.
-- Number of agent runs per month.
-- Percentage of successful agent runs.
-- Percentage of accepted agent outputs.
-- Percentage of runs requiring major human intervention.
-- Number of incidents caused by agent workflows.
-- Cost per accepted output, where tooling makes cost visible.
+- Workflows with named owner, purpose, permissions, and approval rules.
+- Number of agent runs per month, if logged automatically.
+- Successful agent runs.
+- Accepted agent outputs.
+- Agent runs requiring major human intervention.
+- Incidents caused by agent workflows.
 
 How to collect:
 
 - Simple workflow log.
 - GitHub Actions or automation history.
-- PR labels.
 - Incident records.
 
 Recommended workflow log:
@@ -278,12 +258,9 @@ These metrics show whether AI spend is producing useful outcomes.
 
 Lightweight metrics:
 
-- AI tool cost per active user.
-- AI tool cost per team.
-- Token or model cost by workflow, where available.
-- Cost per accepted agent output.
+- AI tool cost per active user or team.
+- Token or model cost by workflow, only where available.
 - High-cost workflows reviewed or optimized.
-- Usage of expensive models for low-value tasks.
 
 How to collect:
 
@@ -302,13 +279,10 @@ If the organization wants the lightest possible measurement system, start with t
 1. Percentage of engineers using AI monthly.
 2. Self-reported usefulness of AI.
 3. Self-reported confidence verifying AI output.
-4. Number of AI-assisted PRs or work items.
-5. Percentage of AI-assisted PRs with verification proof.
-6. Median PR cycle time.
-7. Median PR review time.
-8. Escaped defects or reopened work items.
-9. Number of reusable AI assets or workflows shared.
-10. Number of AI-related incidents.
+4. Percentage of AI-assisted PRs with verification proof, if teams label AI-assisted PRs.
+5. Median PR cycle time and review time.
+6. Escaped defects, reopened work items, or AI-related incidents.
+7. Number of reusable AI assets or workflows shared.
 
 ## Phase Fit
 
