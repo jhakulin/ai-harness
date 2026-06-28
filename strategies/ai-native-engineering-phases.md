@@ -6,33 +6,33 @@ This document outlines a practical path for moving from conventional software en
 
 ## Strategic Position
 
-Every employee is expected to build capability to work effectively with AI. This means understanding where AI can improve their work, where it creates risks, how to verify its output and how to improve workflows utlixing AI.
+Every employee is expected to build capability to work effectively with AI. This means understanding where AI can improve their work, where it creates risks, how to verify its output, and how to improve workflows utilizing AI.
 
 The recommended strategy is:
 
-- Build broad AI-fluency accorss employees, roles and teams
-- Define how AI assisted work is owned, reviewed, verified and accepted, icluding who is accountable for quality, safety and impact of the outcome.
-- Provide default supported tools for broad adoption, while staying oprn to alternatives that meet the governance bar. Prefer adopting and extending comon and popular AI engineering tools over investing heavily on company-specific alternatives from scratch unless there is clear reason.
-- Encourage engineers and teams experiment with AI, evaluating which workflows, harness usage, quardrails, models and review practices produce best results.
-- Use light-weight and iterative spec-driven development practices to clarify the intent, constraints and proof before AI assisted implementation work.
-- Develop AI harness engineering as a core capability that helps engineers to work more effectively with AI and turn reusable AI asset like prompts, skills, tests & evaluations, workflow improvements and guardrails into shared engineering assets that improve engineering organization productivity.
+- Build broad AI fluency across employees, roles, and teams.
+- Define how AI-assisted work is owned, reviewed, verified, and accepted, including who is accountable for quality, safety, and impact of the outcome.
+- Provide default supported tools for broad adoption, while staying open to alternatives that meet the governance bar. Prefer adopting and extending common and popular AI engineering tools over investing heavily in company-specific alternatives from scratch unless there is a clear reason.
+- Encourage engineers and teams to experiment with AI, evaluating which workflows, harness usage, guardrails, models, and review practices produce the best results.
+- Use lightweight and iterative spec-driven development practices to clarify the intent, constraints, and proof before AI-assisted implementation work.
+- Develop AI harness engineering as a core capability that helps engineers work more effectively with AI and turn reusable AI assets like prompts, skills, tests and evaluations, workflow improvements, and guardrails into shared engineering assets that improve engineering organization productivity.
 
 Core principle:
 
-> AI agents are part of the engineering workforce. Teams collaborate with AI to analyze problems, explore options, plan, implement, review, test and document the work while retaining ownership of intent, architeture,,risk, quality and buisness impact.
+> AI agents are part of the engineering workforce. Teams collaborate with AI to analyze problems, explore options, plan, implement, review, test, and document the work while retaining ownership of intent, architecture, risk, quality, and business impact.
 
 ## Phase 0: Diagnose and Establish Direction
 
-This phase creates the foundation for AI assistend engineering adoption by clarifing where the company is today, where it targets to go, who are the onwers in the transformation and how AI assisted work is governed across tools, data, permissions, review and quality. 
+This phase creates the foundation for AI-assisted engineering adoption by clarifying where the company is today, where it targets to go, who owns the transformation, and how AI-assisted work is governed across tools, data, permissions, review, and quality.
 
 Key outcomes:
 
-- Company and leadership position on AI-assisted engineering as strategic capability.
+- Company and leadership position on AI-assisted engineering as a strategic capability.
 - Baseline of current AI adoption, delivery flow, review bottlenecks, quality outcomes, and areas where AI is currently a multiplier or a tax.
-- Nade ownership for AI-native engineering transformation, including eablement, measurement and governance.
-- Company-wide requirement that employees develop the capaility to use AI effectively i their work and in team workflows
+- Named ownership for AI-native engineering transformation, including enablement, measurement, and governance.
+- Company-wide requirement that employees develop the capability to use AI effectively in their work and in team workflows.
 - Open but governed tooling strategy with default supported tools and experimental tool lanes.
-- Ownership rules for AI-assisted work, including responsibility for outputs, approvals, shared workflows and ongoing maintenance.
+- Ownership rules for AI-assisted work, including responsibility for outputs, approvals, shared workflows, and ongoing maintenance.
 - Initial guidance for agent harnesses and spec-driven development.
 - Initial definition of harness engineering practices.
 
@@ -66,7 +66,7 @@ Expected behavior change:
 
 Key practices:
 
-- Use AI as collaborator for problem analysis, finding solution options, architecture/design tradeofs and planning the work
+- Use AI as a collaborator for problem analysis, finding solution options, architecture/design tradeoffs, and planning the work.
 - Use approved or experimental tools within company policy.
 - Keep sensitive data out of unapproved systems.
 - Use repository instructions, such as `AGENTS.md`, where appropriate.
@@ -77,7 +77,7 @@ Key practices:
 - Share useful workflows with the team.
 
 Success signal:
-- Engineers achieve measurable productivity improvement from the AI collaboration. Example signals include reduced task cycle time, increased completed delivery items, higher verification coverage, faster onboarding to unfamiliar systems, increased amount of reusable AI asset (prompts, skills, or guardrail rules etc.) contributed to team adoption.
+- Engineers achieve measurable productivity improvement from AI collaboration. Example signals include reduced task cycle time, increased completed delivery items, higher verification coverage, faster onboarding to unfamiliar systems, and more reusable AI assets, such as prompts, skills, or guardrail rules, contributed to team adoption.
 
 ## Phase 2: AI-Assisted Team Delivery
 
@@ -102,7 +102,7 @@ Spec-driven development approach:
 - Use internal skills and plugins only as company-specific adapters, not as a competing SDD framework.
 
 Success signal:
-- Team delivery productivity improves measurably: teams complete Epics, customer scenarios or quality improvements faster with AI assisted collaboration, while using specs, acceptance criteria, API traces and other proof to maintain quality. Teams also have initial practices to run selected tasks asynchronously with AI, away from keyboard.
+- Team delivery productivity improves measurably: teams complete epics, customer scenarios, or quality improvements faster with AI-assisted collaboration, while using specs, acceptance criteria, API traces, and other proof to maintain quality. Teams also have initial practices to run selected tasks asynchronously with AI, away from keyboard.
 
 ## Phase 3: Governed Agentic Workflows
 
